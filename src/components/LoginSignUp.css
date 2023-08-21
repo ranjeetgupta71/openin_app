@@ -1,0 +1,38 @@
+/* LoginSignUp.css */
+.black-bg {
+    background-color: black;
+    color: white; /* Adjust text color to ensure readability */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    /* padding: 2rem; Add padding for content spacing */
+    padding:2rem;
+  }
+  
+  /* LoginSignUp.css */
+.form-container {
+    width: 40%; /* Adjust the width as needed */
+    padding: 2rem; /* Adjust the padding as needed */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    /* align-items: center;  */
+    justify-content: center; 
+    height: 100vh; /* Set the container height */
+  }
+  
+  .item {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .text-left {
+    text-align: left !important; /* Align text to the left side */
+  }
+
+  /* LoginSignUp.css */
+.login-buttons {
+  display: flex;
+  gap: 10px; /* Adjust this value for spacing between buttons */
+}

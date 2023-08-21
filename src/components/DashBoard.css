@@ -1,0 +1,87 @@
+/* DashBoard.css */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 95vh;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+  }
+  
+  .menu-items li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .menu-items li svg {
+    margin-right: 10px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .search-bar input {
+    margin-right: 10px;
+    padding-right: 30px; /* Space for the icon */
+  }
+  
+  .search-bar svg {
+    position: absolute;
+    top: 6%;
+    right: 35px;
+    transform: translateY(-50%);
+  }
+  /* DashBoard.css */
+.bottom-menu-items {
+  list-style-type: none; /* Remove the list markers */
+  margin-top: auto; /* Push the items to the bottom */
+}
+
+  
+  /* Additional styling for the search bar button if needed */
+  .profile-circle {
+    position: absolute;
+    top: 48px;
+    right: 10px; /* Adjust this value to position the circle properly */
+    transform: translate(0, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #aaa;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
