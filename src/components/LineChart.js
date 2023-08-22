@@ -103,7 +103,7 @@ const ActivityLineChart = () => {
         left:"20px",
         width: "1000px",
         height:"300px",
-        background: "#EAEAEA",
+        background: "white",
         padding: "20px",
         borderRadius: "10px",
       }}
@@ -114,6 +114,7 @@ const ActivityLineChart = () => {
           id="monthRangePicker"
           //   value={selectedMonthRange}
           //   onChange={handleMonthRangeChange}
+          style={{ borderColor: "white" }}
         >
           <option value="May-June">May-June 2021</option>
           <option value="June-July">June-July 2021</option>

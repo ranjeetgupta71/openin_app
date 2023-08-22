@@ -1,7 +1,14 @@
 import { GoogleLoginButton } from "react-social-login-buttons";
 import { LoginSocialGoogle } from "reactjs-social-login";
 
-function LoginWithGoogle(){
+function LoginWithGoogle({onGoogleLogin}){
+
+    const handleGoogleLogin = (provider, data) => {
+        console.log(provider, data);
+        console.log("inside login",provider);
+        // Call the parent component's callback function to send the response
+        onGoogleLogin(provider);
+      };
     return(
         <div>
             <LoginSocialGoogle
@@ -9,9 +16,7 @@ function LoginWithGoogle(){
             scope="openid profile email"
             discoveryDocs="claims_supported"
             access_type="offline"
-            onResolve={({ provider, data }) => {
-            console.log(provider, data);
-            }}
+            onResolve={handleGoogleLogin}
             onReject={(err) => {
             console.log(err);
             }}>

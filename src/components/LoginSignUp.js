@@ -7,10 +7,12 @@ import './LoginSignUp.css'; // Import your custom CSS file
 import GoogleLogin from 'react-google-login'; // Import GoogleLogin component
 import LoginWithGoogle from "./LoginWithGoogle";
 import LoginWithApple from './LoginWithApple'
+import {useNavigate} from 'react-router-dom'
 
 
 function LoginSignUp() {
   const { loginWithRedirect } = useAuth0();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,10 +23,25 @@ function LoginSignUp() {
     });
   };
 
+  const handleRegisterLinkClick = (event) => {
+    event.preventDefault();
+    loginWithRedirect({
+      screen_hint: "signup", // Show the signup screen
+    });
+  };
+
   const responseGoogle = (response) => {
-    console.log(response);
+    console.log("here",response);
+    const profilePicture = response.data.picture; // Extract the profile picture URL
+    navigate(`/dashboard?profilePicture=${encodeURIComponent(profilePicture)}`);
+    // navigate("/dashboard");
+    // console.log(response);
     // Here you can handle the response from Google
   };
+
+
+  
+
 
   return (
     <div className="row">
@@ -37,7 +54,7 @@ function LoginSignUp() {
 
         <div className="login-container"> {/* Add this div for Google login */}
           <div className="login-buttons">
-              <LoginWithGoogle/>
+              <LoginWithGoogle onGoogleLogin={responseGoogle}/>
               <LoginWithApple/>
           </div>
         </div>
@@ -73,9 +90,12 @@ function LoginSignUp() {
           </Form>
         </div>
           <p className="text-center mt-3">
-            Don't have an account? <a href="#">Register here</a>.
+            Don't have an account? <a href="#" onClick={handleRegisterLinkClick}>Register here</a>.
           </p>
+          
       </div>
+      {/* <button onClick={redirectToDashboard}>Go to Dashboard</button> */}
+
     </div>
   );
 }

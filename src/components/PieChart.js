@@ -59,7 +59,7 @@ const PieChart = () => {
         right:"-12px",
         top:"10px",
         textAlign: "center",
-        backgroundColor: "gray",
+        backgroundColor: "white",
         color: "black",
         width: "500px",
         height: "269px",

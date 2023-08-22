@@ -8,7 +8,7 @@ const Schedule = () => {
     height: '269px',
     top: '20px',
     right:'-20px',
-    backgroundColor: 'lightgray',
+    backgroundColor: "white",
     padding: '20px',
     position: 'relative',
   };
