@@ -60,7 +60,7 @@ const ActivityLineChart = () => {
     },
     plugins: {
       legend: {
-        display: true,
+        display: false,
         position: "top",
         labels: {
           usePointStyle: true,
@@ -102,26 +102,43 @@ const ActivityLineChart = () => {
         top:"0px",
         left:"20px",
         width: "1000px",
-        height:"300px",
+        height:"330px",
         background: "white",
         padding: "20px",
         borderRadius: "10px",
       }}
     >
-      <h6>Activities</h6>
-      <div>
-        <select
-          id="monthRangePicker"
-          //   value={selectedMonthRange}
-          //   onChange={handleMonthRangeChange}
-          style={{ borderColor: "white" }}
-        >
-          <option value="May-June">May-June 2021</option>
-          <option value="June-July">June-July 2021</option>
-          {/* Add more options for other month ranges */}
-        </select>
-      </div >
-      <Line data={data} options={options} />
+      <div class="titleContainer">
+        <div>
+          <h6>Activities</h6>
+          <select
+            id="monthRangePicker"
+            //   value={selectedMonthRange}
+            //   onChange={handleMonthRangeChange}
+            style={{ borderColor: "white" }}
+          >
+            <option value="May-June">May-June 2021</option>
+            <option value="June-July">June-July 2021</option>
+            {/* Add more options for other month ranges */}
+          </select>
+        </div>
+        <div>
+        <div className="legends">
+          <div className="legend-item">
+            <span className="legend-circle guests-circle"></span>
+            <div className="legends-label">Guests</div>
+          </div>
+          <div className="legend-item">
+            <span className="legend-circle users-circle"></span>
+            <div className="legends-label">Users</div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      <div style={{ height: '250px', width: '1000px' }}>
+        <Line data={data} options={options} />
+      </div>
     </div>
   );
 };

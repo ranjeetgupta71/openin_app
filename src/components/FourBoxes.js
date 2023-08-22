@@ -1,10 +1,10 @@
 import React from 'react';
 
-const BoxComponent = () => {
+const FourBoxes = () => {
   return (
     // background color: #EAEAEA
     <div style={{display:'flex', flexDirection:'row'}}>
-    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px 20px 20px' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '221.05px', height: '120px', backgroundColor: '#DDEFE0', textAlign: 'center', position: 'relative' , borderRadius: '15px' }}>
         {/* SVG icon */}
         <div style={{position: 'absolute', top: '10px', right: '10px' }}>
@@ -19,7 +19,7 @@ const BoxComponent = () => {
     </div>
 
     {/* //2nd */}
-    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px 20px 20px' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '221.05px', height: '120px', backgroundColor: '#F4ECDD', textAlign: 'center', position: 'relative' , borderRadius: '15px' }}>
         {/* SVG icon */}
         <div style={{position: 'absolute', top: '10px', right: '10px' }}>
@@ -35,7 +35,7 @@ const BoxComponent = () => {
     </div>
 
     {/* 3rd */}
-    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px 20px 20px' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '221.05px', height: '120px', backgroundColor: '#EFDADA', textAlign: 'center', position: 'relative' , borderRadius: '15px' }}>
         {/* SVG icon */}
         <div style={{position: 'absolute', top: '10px', right: '10px' }}>
@@ -51,7 +51,7 @@ const BoxComponent = () => {
     </div>
 
     {/* 4th */}
-    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px 20px 20px' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '221.05px', height: '120px', backgroundColor: '#DEE0EF', textAlign: 'center', position: 'relative' , borderRadius: '15px' }}>
         {/* SVG icon */}
         <div style={{position: 'absolute', top: '10px', right: '10px' }}>
@@ -69,4 +69,4 @@ const BoxComponent = () => {
   );
 };
 
-export default BoxComponent;
+export default FourBoxes;

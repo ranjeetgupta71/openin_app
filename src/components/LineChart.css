@@ -34,4 +34,39 @@
     visibility: hidden;
     z-index: -1;
   }
-  
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+    
+  .legends {
+    display: flex;
+  }
+
+  .legends-label {
+    margin-right: 60px;
+  }
+
+  /* Add these styles to your LineChart.css or a separate CSS file */
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.legend-circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.guests-circle {
+  background-color: #36a2eb; /* Color for Guests */
+}
+
+.users-circle {
+  background-color: #ff6384; /* Color for Users */
+}
